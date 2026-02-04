@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'; // importa ferramentas do React
 import { Header } from './components/Header'; 
 import { Footer } from './components/Footer';
+import { Formulario } from './components/Formulario';
 import { api } from './services/api';  // importa configuração axios
 
 
@@ -27,6 +28,7 @@ function App() {
     <Header /> 
 
     <main>
+      <Formulario />
       <h2>Lista de Usuários</h2>
       <ul>
         {usuarios.map(usuario => (
