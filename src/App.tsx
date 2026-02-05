@@ -23,12 +23,20 @@ function App() {
       setUsuarios(resposta.data); // guarda o que veio do backend na memória
     });
   }, []);
+
+  // MUDANÇA 1: FUNÇÃO ATUALIZAR
+    function adicionarNovoUsuario(novoUsuario: Usuario) {
+      setUsuarios (listaAntiga => [...listaAntiga, novoUsuario])
+    }
+
   return(
     <>
     <Header /> 
 
     <main>
-      <Formulario />
+      {/* --- MUDANÇA 2: PASSAMOS A FUNÇÃO PRO FILHO --- */}
+      {/* Agora o formulário sabe que essa função existe e pode usar ela */}
+      <Formulario aoCadastrar={adicionarNovoUsuario} />
       <h2>Lista de Usuários</h2>
       <ul>
         {usuarios.map(usuario => (

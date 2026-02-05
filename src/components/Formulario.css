@@ -1,0 +1,39 @@
+form {
+    display: flex;            /* Ativa o modo Flexbox: facilita o alinhamento */
+    flex-direction: column; /* Empilha os itens um embaixo do outro (vertical) */
+    gap: 12px;          /* Cria um espaço uniforme entre cada elemento interno */
+    max-width: 400px;  /* Define uma largura máxima para não esticar na tela toda */
+    margin: 20px 0;   /* 20px de espaço em cima/baixo e centralizado nas laterais */
+    padding: 20px;   /* Espaço interno entre o conteúdo e a borda do formulário */
+    background-color: #f9f9f9;  /* Um cinza bem clarinho para dar contraste com o fundo */
+    border-radius: 8px;         /* Arredonda as quinas do formulário */
+    border: 1px solid #ddd;   /* Uma linha fina e clara em volta para dar profundidade */
+}
+
+input {
+    padding: 10px;       /* Deixa o campo mais "gordinho", melhor para digitar */
+    border-radius: 4px;   /* Arredonda as quinas das caixas de texto */
+    border: 1px solid #ccc; /* Cor da borda da caixa */
+    font-size: 16px;
+    outline: none;     /* Remove aquela borda azul padrão do navegador ao clicar */
+}
+
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);  /* Cria um leve brilho azul em volta */
+} 
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;    /* Faz o mouse virar a "mãozinha" ao passar por cima */
+    font-weight: bold;
+    transition: 0.3s;  /* Deixa a mudança de cor suave ao passar o mouse */
+}
+
+button:hover{
+    background-color: #0056b3;   /* Escurece o azul quando o usuário interage */
+}
